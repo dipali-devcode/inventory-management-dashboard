@@ -1,0 +1,21 @@
+.badge {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.badge.good {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.badge.average {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.badge.poor {
+  background: #fee2e2;
+  color: #dc2626;
+}
