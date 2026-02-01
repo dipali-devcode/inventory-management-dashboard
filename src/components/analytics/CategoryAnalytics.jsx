@@ -44,10 +44,14 @@ const CategoryAnalytics = ({ products }) => {
         <ResponsiveContainer width="100%" height={340}>
           <BarChart data={chartData} barGap={8}>
             <CartesianGrid strokeDasharray="4 4" stroke="#e5e7eb" />
-            <XAxis
-              dataKey="category"
-              tick={{ fontSize: 12, fill: "#6b7280" }}
-            />
+           <XAxis
+  dataKey="category"
+  interval={0}
+  angle={-20}
+  textAnchor="end"
+  tick={{ fontSize: 11 }}
+/>
+
             <YAxis tick={{ fontSize: 12, fill: "#6b7280" }} />
             <Tooltip />
             <Legend />

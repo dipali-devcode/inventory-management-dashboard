@@ -1,33 +1,24 @@
 .category-analytics-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 16px;
-  padding: 20px 24px;
-  border: 1px solid #e5e7eb;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
-.category-title {
+.category-analytics-card h3 {
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .category-chart-wrapper {
   width: 100%;
-  height: 340px;
+  /* aspect-ratio: 16 / 9; */
 }
 
-/* ---------- MOBILE ---------- */
+/* Mobile */
 @media (max-width: 768px) {
-  .category-analytics-card {
-    padding: 16px;
-  }
-
   .category-chart-wrapper {
-    height: 260px;
-  }
-
-  .category-title {
-    font-size: 15px;
+    aspect-ratio: 4 / 3;
   }
 }

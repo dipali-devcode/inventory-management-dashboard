@@ -21,22 +21,13 @@ const Analytics = () => {
 
   return (
     <div className="analytics-page">
-      {/* KPIs */}
       <AnalyticsKPIs products={items} />
 
-      {/* Top charts row */}
-      <div className="analytics-top-row">
-        <div className="analytics-trends">
-          <InventoryTrends products={items} />
-        </div>
-
-        <div className="analytics-health">
-          <StockHealthBreakdown products={items} />
-        </div>
+      <div className="analytics-grid">
+        <InventoryTrends products={items} />
+        <StockHealthBreakdown products={items} />
+        <CategoryAnalytics products={items} />
       </div>
-
-      {/* Bottom full-width chart */}
-      <CategoryAnalytics products={items} />
     </div>
   );
 };

@@ -1,34 +1,33 @@
 .inventory-trends-card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 20px 24px;
-  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
-.trends-title {
+.inventory-trends-card h3 {
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
   margin-bottom: 12px;
 }
 
-/* Chart container spacing */
-.chart-wrapper {
+/* 🔑 THIS FIXES MOBILE BREAKING */
+.inventory-chart-container {
   width: 100%;
-  height: 320px;
+  min-height: 260px;
 }
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 768px) {
-  .inventory-trends-card {
-    padding: 16px;
+/* Tablet & up */
+@media (min-width: 768px) {
+  .inventory-chart-container {
+    min-height: 320px;
   }
+}
 
-  .chart-wrapper {
-    height: 260px;
-  }
-
-  .trends-title {
-    font-size: 15px;
+/* Large screens */
+@media (min-width: 1024px) {
+  .inventory-chart-container {
+    min-height: 360px;
   }
 }
