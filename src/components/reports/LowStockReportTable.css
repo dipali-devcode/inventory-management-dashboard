@@ -1,0 +1,134 @@
+.low-stock-report-table {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Title */
+.low-stock-report-table h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+/* Table */
+.low-stock-report-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header */
+.low-stock-report-table thead tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.low-stock-report-table th {
+  padding: 12px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: left;
+}
+
+/* Rows */
+.low-stock-report-table td {
+  padding: 14px 10px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.low-stock-report-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.low-stock-report-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* ================= */
+/* STATUS BADGES */
+/* ================= */
+.low-stock-report-table td:last-child {
+  font-weight: 600;
+}
+
+.low-stock-report-table td:last-child::before {
+  content: "";
+}
+
+.low-stock-report-table td:last-child:contains("Low Stock") {
+  color: #ea580c;
+}
+
+.low-stock-report-table td:last-child:contains("Out of Stock") {
+  color: #dc2626;
+}
+
+/* Badge styles via span fallback */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.status-low {
+  background: #fed7aa;
+  color: #9a3412;
+}
+
+.status-out {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+/* =============================== */
+/* MOBILE RESPONSIVE (CARD STYLE) */
+/* =============================== */
+@media (max-width: 640px) {
+  .low-stock-report-table table,
+  .low-stock-report-table thead,
+  .low-stock-report-table tbody,
+  .low-stock-report-table th,
+  .low-stock-report-table td,
+  .low-stock-report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .low-stock-report-table thead {
+    display: none;
+  }
+
+  .low-stock-report-table tbody tr {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.04),
+      0 6px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .low-stock-report-table td {
+    padding: 8px 0;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .low-stock-report-table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+}
