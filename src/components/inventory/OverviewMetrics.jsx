@@ -20,8 +20,8 @@ const OverviewMetrics = ({ products }) => {
   ).length;
 
   return (
-    <div className="overview-section">
-      <h3 className="overview-title">Overview Metrics</h3>
+    <div className="overview-section main">
+      <h3>Overview Metrics</h3>
 
       <div className="overview-metrics">
         <div className="metric-card">

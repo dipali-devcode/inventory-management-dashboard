@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../store/productsSlice";
-import OverviewMetrics from "../components/OverviewMetrics";
-import InventoryTable from "../components/InventoryTable";
-import ReorderRecommendations from "../components/ReorderRecommendations";
-import SlowMovingInventory from "../components/SlowMovingInventory";
-import SupplierPerformance from "../components/SupplierPerformance";
+import OverviewMetrics from "../components/inventory/OverviewMetrics";
+import InventoryTable from "../components/inventory/InventoryTable";
+import ReorderRecommendations from "../components/inventory/ReorderRecommendations";
+import SlowMovingInventory from "../components/inventory/SlowMovingInventory";
+import SupplierPerformance from "../components/inventory/SupplierPerformance";
 
 const Inventory = () => {
   const dispatch = useDispatch();

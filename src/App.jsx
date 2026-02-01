@@ -1,7 +1,7 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/layout/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
-import Inventory from "./pages/inventory";
+import Dashboard from "./pages/Dashboard";
+import Inventory from "./pages/Inventory";
 import Analytics from "./pages/Analytics";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";

@@ -45,7 +45,7 @@ const SupplierPerformance = ({ products }) => {
   });
 
   return (
-    <div className="card-section">
+    <div className="card-section main">
       <h3>Supplier Performance</h3>
 
       <div className="table-wrapper">

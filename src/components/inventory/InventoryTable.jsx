@@ -20,8 +20,8 @@ const InventoryTable = ({ products = [] }) => {
   }
 
   return (
-    <div className="inventory-container">
-      <h2>Current Inventory</h2>
+    <div className="inventory-container main">
+      <h3>Current Inventory</h3>
 
       <div className="table-wrapper">
         <table className="inventory-table">

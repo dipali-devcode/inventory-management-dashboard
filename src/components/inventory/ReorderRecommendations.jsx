@@ -9,7 +9,7 @@ const ReorderRecommendations = ({ products }) => {
   if (reorderItems.length === 0) return null;
 
   return (
-    <div className="card-section">
+    <div className="card-section main">
       <h3>Reorder Recommendations</h3>
 
       <div className="reorder-list">

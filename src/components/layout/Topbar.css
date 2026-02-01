@@ -43,3 +43,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .topbar-center h2{
+    display: none;
+  }
+}

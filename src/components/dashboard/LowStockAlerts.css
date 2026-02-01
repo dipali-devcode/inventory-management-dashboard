@@ -1,0 +1,47 @@
+.alerts-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.alert-row {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.alert-row:last-child {
+  border-bottom: none;
+}
+
+.alert-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.alert-icon.warning {
+  background: #fef3c7;
+  color: #ca8a04;
+}
+
+.alert-icon.danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.alert-text {
+  font-size: 13px;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.alert-time {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 4px;
+}

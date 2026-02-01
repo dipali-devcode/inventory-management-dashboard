@@ -9,7 +9,7 @@ const SlowMovingInventory = ({ products }) => {
   if (slowMovingItems.length === 0) return null;
 
   return (
-    <div className="card-section">
+    <div className="card-section main">
       <h3>Slow Moving Inventory</h3>
 
       <div className="table-wrapper">
