@@ -1,0 +1,33 @@
+.category-analytics-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.category-chart-wrapper {
+  width: 100%;
+  height: 340px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .category-analytics-card {
+    padding: 16px;
+  }
+
+  .category-chart-wrapper {
+    height: 260px;
+  }
+
+  .category-title {
+    font-size: 15px;
+  }
+}

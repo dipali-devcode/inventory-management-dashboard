@@ -1,0 +1,34 @@
+.inventory-trends-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.trends-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+/* Chart container spacing */
+.chart-wrapper {
+  width: 100%;
+  height: 320px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .inventory-trends-card {
+    padding: 16px;
+  }
+
+  .chart-wrapper {
+    height: 260px;
+  }
+
+  .trends-title {
+    font-size: 15px;
+  }
+}

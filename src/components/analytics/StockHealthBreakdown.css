@@ -1,0 +1,67 @@
+.stock-health-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stock-health-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.donut-chart-wrapper {
+  width: 100%;
+  height: 220px;
+}
+
+.stock-health-legend {
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.in-stock {
+  color: #22c55e;
+}
+
+.low-stock {
+  color: #fbbf24;
+}
+
+.out-stock {
+  color: #ef4444;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .stock-health-card {
+    padding: 16px;
+  }
+
+  .donut-chart-wrapper {
+    height: 180px;
+  }
+
+  .stock-health-legend {
+    font-size: 12px;
+    gap: 10px;
+  }
+}

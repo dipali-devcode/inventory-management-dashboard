@@ -10,6 +10,8 @@ const Topbar = () => {
         return "Dashboard";
       case "/inventory":
         return "Inventory Management";
+        case "/analytics":
+        return "Analytics";
       case "/reports":
         return "Reports";
       case "/settings":

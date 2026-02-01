@@ -286,3 +286,42 @@ textarea:focus {
     font-size: 13px;
   }
 }
+
+/* ================================
+   ANALYTICS
+================================ */
+.analytics-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ----- TOP ROW (Trends + Stock Health) ----- */
+.analytics-top-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Ensure cards stretch equally */
+.analytics-trends,
+.analytics-health {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 1024px) {
+  .analytics-top-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-page {
+    padding: 16px;
+    gap: 16px;
+  }
+}
