@@ -1,9 +1,4 @@
-import {
-  Package,
-  Boxes,
-  AlertTriangle,
-  XCircle,
-} from "lucide-react";
+import { Package, Boxes, AlertTriangle, XCircle } from "lucide-react";
 import "./ReportsSummaryCards.css";
 
 const LOW_STOCK_THRESHOLD = 20;
@@ -15,21 +10,20 @@ const ReportsSummaryCards = ({ products }) => {
 
   const totalStockUnits = safeProducts.reduce(
     (sum, product) => sum + product.stock,
-    0
+    0,
   );
 
   const lowStockItems = safeProducts.filter(
-    (product) =>
-      product.stock > 0 && product.stock <= LOW_STOCK_THRESHOLD
+    (product) => product.stock > 0 && product.stock <= LOW_STOCK_THRESHOLD,
   ).length;
 
   const outOfStockItems = safeProducts.filter(
-    (product) => product.stock === 0
+    (product) => product.stock === 0,
   ).length;
 
   return (
-    <div className="reports-wrapper">
-      <h2 className="reports-title">Inventory Reports</h2>
+    <div className="reports-wrapper main">
+      <h2>Inventory Reports</h2>
       <p className="reports-subtitle">
         Comprehensive overview of your current inventory status.
       </p>

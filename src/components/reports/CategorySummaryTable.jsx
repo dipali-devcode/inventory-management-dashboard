@@ -1,4 +1,4 @@
-import "./CategorySummaryTable.css"
+import "./CategorySummaryTable.css";
 
 const CategorySummaryTable = ({ products }) => {
   const safeProducts = Array.isArray(products) ? products : [];

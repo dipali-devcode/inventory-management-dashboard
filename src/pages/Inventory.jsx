@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { fetchProducts } from "../store/productsSlice";
+import { setSearchQuery } from "../store/searchSlice";
+import { selectFilteredProducts } from "../store/selectors";
+
 import OverviewMetrics from "../components/inventory/OverviewMetrics";
 import InventoryTable from "../components/inventory/InventoryTable";
 import ReorderRecommendations from "../components/inventory/ReorderRecommendations";
@@ -9,32 +13,45 @@ import SupplierPerformance from "../components/inventory/SupplierPerformance";
 
 const Inventory = () => {
   const dispatch = useDispatch();
-  const { items, status, error } = useSelector((state) => state.products);
+
+  // const isLoading = useSelector((state) => state.ui.isLoading);
+  // const error = useSelector((state) => state.ui.error);
+
+  const searchQuery = useSelector((state) => state.search.searchQuery);
+
+  const products = useSelector(selectFilteredProducts);
 
   useEffect(() => {
-    if (status === "idle") {
+    if (products.length === 0) {
       dispatch(fetchProducts());
     }
-  }, [dispatch, status]);
-
-  if (status === "loading") {
-    return <p>Loading inventory...</p>;
-  }
-
-  if (status === "failed") {
-    return <p>Error: {error}</p>;
-  }
+  }, [dispatch, products.length]);
 
   return (
     <div>
-      <OverviewMetrics products={items} />
-      <InventoryTable products={items} />
-      <div className="dashboard-grid">
-        <ReorderRecommendations products={items} />
-        <SlowMovingInventory products={items} />
+      <OverviewMetrics products={products} />
+
+      <div className="inventory-card">
+        <div className="inventory-header main">
+          <h3>Current Inventory</h3>
+
+          <input
+            type="text"
+            placeholder="Search products or categories..."
+            value={searchQuery}
+            onChange={(e) => dispatch(setSearchQuery(e.target.value))}
+          />
+        </div>
+
+        <InventoryTable products={products} />
       </div>
 
-      <SupplierPerformance products={items} />
+      <div className="dashboard-grid">
+        <ReorderRecommendations products={products} />
+        <SlowMovingInventory products={products} />
+      </div>
+
+      <SupplierPerformance products={products} />
     </div>
   );
 };

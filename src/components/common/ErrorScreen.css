@@ -1,0 +1,79 @@
+/* Full screen center */
+.error-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 24px;
+}
+
+/* Content card (very subtle) */
+.error-content {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  padding: 28px 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+/* Icon */
+.error-icon {
+  font-size: 36px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.error-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* Message */
+.error-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Retry button */
+.retry-btn {
+  background: #5b61f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.retry-btn:hover {
+  background: #4f46e5;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .error-content {
+    padding: 22px 18px;
+  }
+
+  .error-icon {
+    font-size: 32px;
+  }
+
+  .error-content h3 {
+    font-size: 15px;
+  }
+
+  .error-content p {
+    font-size: 12.5px;
+  }
+}

@@ -7,7 +7,6 @@ const ITEMS_PER_PAGE = 10;
 const InventoryTable = ({ products = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Pagination
   const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedItems = products.slice(
@@ -20,9 +19,7 @@ const InventoryTable = ({ products = [] }) => {
   }
 
   return (
-    <div className="inventory-container main">
-      <h3>Current Inventory</h3>
-
+    <div className="inventory-container">
       <div className="table-wrapper">
         <table className="inventory-table">
           <thead>
@@ -52,7 +49,6 @@ const InventoryTable = ({ products = [] }) => {
                   <td className="muted">{product.category}</td>
                   <td className="price">${product.price}</td>
 
-                  {/* Stock number only */}
                   <td>{product.stock}</td>
 
                   <td className="rating">
@@ -90,7 +86,6 @@ const InventoryTable = ({ products = [] }) => {
         </table>
       </div>
 
-      {/* Pagination */}
       <div className="pagination">
         <button
           className="btn btn-outline"

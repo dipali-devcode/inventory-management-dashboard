@@ -1,7 +1,6 @@
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: 240px;
-  height: auto;
   background: #ffffff;
   padding: 20px 14px;
   border-right: 1px solid #eef0f4;
@@ -9,15 +8,34 @@
   flex-shrink: 0;
 }
 
+/* ===== LOGO (MATCHED DESIGN) ===== */
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding-left: 6px;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  background: #5b61f6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.logo-text {
   font-size: 15px;
   font-weight: 600;
   color: #5b61f6;
-  margin-bottom: 26px;
-  padding-left: 6px;
 }
 
 /* ===== NAV ===== */
@@ -36,22 +54,19 @@
   border-radius: 8px;
   font-size: 14px;
   font-weight: 400;
-  color: #6b7280; /* inactive text */
+  color: #6b7280;
   text-decoration: none;
-  transition:
-    background 0.15s ease,
-    color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-/* Icons (inactive) */
 .sidebar nav a svg {
   font-size: 16px;
   color: #9ca3af;
 }
 
-/* ===== ACTIVE STATE (UI MATCHED) ===== */
+/* ACTIVE */
 .sidebar nav a.active {
-  background: #f1f3ff; /* very light indigo */
+  background: #f1f3ff;
   color: #5b61f6;
   font-weight: 500;
 }
@@ -60,7 +75,7 @@
   color: #5b61f6;
 }
 
-/* ===== HOVER (SUBTLE) ===== */
+/* HOVER */
 .sidebar nav a:hover:not(.active) {
   background: #f8f9ff;
 }
@@ -86,6 +101,7 @@
   .sidebar.open {
     transform: translateX(0);
   }
+
   .menu-btn {
     display: flex;
     align-items: center;
@@ -109,6 +125,7 @@
   display: flex;
   min-height: 100vh;
 }
+
 .content-column {
   flex: 1;
   display: flex;
@@ -124,14 +141,7 @@
   min-width: 0;
 }
 
-/* Desktop */
-@media (min-width: 769px) {
-  .page-content {
-    margin-left: 0;
-  }
-}
-
-/* Mobile */
+/* Mobile content */
 @media (max-width: 768px) {
   .app-layout {
     display: block;

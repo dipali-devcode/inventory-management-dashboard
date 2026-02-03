@@ -132,7 +132,6 @@ p {
   background: #ffffff;
   border-radius: 8px;
   overflow-x: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 table {
@@ -161,12 +160,6 @@ tr {
   grid-template-columns: 2.2fr 1fr;
   gap: 24px;
   margin: 24px 0px;
-}
-
-@media (max-width: 900px) {
-  .dashboard-middle {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ================================
@@ -262,6 +255,9 @@ textarea:focus {
 
 @media (max-width: 900px) {
   .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-middle {
     grid-template-columns: 1fr;
   }
 }

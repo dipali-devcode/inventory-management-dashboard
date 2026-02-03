@@ -1,32 +1,32 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../store/productsSlice";
+
 import ReportsSummaryCards from "../components/reports/ReportsSummaryCards";
 import LowStockReportTable from "../components/reports/LowStockReportTable";
 import CategorySummaryTable from "../components/reports/CategorySummaryTable";
-import { useEffect } from "react";
 
 const Reports = () => {
   const dispatch = useDispatch();
-  const { items, status, error } = useSelector((state) => state.products);
+
+  const items = useSelector((state) => state.products.items);
+
+  // const isLoading = useSelector((state) => state.ui.isLoading);
+  // const error = useSelector((state) => state.ui.error);
 
   useEffect(() => {
-    if (status === "idle") {
+    if (items.length === 0) {
       dispatch(fetchProducts());
     }
-  }, [dispatch, status]);
+  }, [dispatch, items.length]);
 
-  if (status === "loading") {
-    return <p>Loading inventory...</p>;
-  }
-
-  if (status === "failed") {
-    return <p>Error: {error}</p>;
-  }
-  return <div>
-    <ReportsSummaryCards products={items}/>
-    <CategorySummaryTable products={items}/>
-    <LowStockReportTable products={items}/>
-  </div>;
+  return (
+    <div>
+      <ReportsSummaryCards products={items} />
+      <CategorySummaryTable products={items} />
+      <LowStockReportTable products={items} />
+    </div>
+  );
 };
 
 export default Reports;

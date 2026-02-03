@@ -7,6 +7,7 @@ import {
   FiFileText,
   FiSettings,
   FiMenu,
+  FiPackage,
 } from "react-icons/fi";
 import Topbar from "./Topbar";
 import "./Sidebar.css";
@@ -16,14 +17,17 @@ const Sidebar = ({ children }) => {
 
   return (
     <div className="app-layout">
-      {/* Mobile menu button */}
       <button className="menu-btn" onClick={() => setIsOpen(!isOpen)}>
         <FiMenu />
       </button>
 
-      {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="logo">InventoryPro</div>
+        <div className="logo">
+          <span className="logo-icon">
+            <FiPackage />
+          </span>
+          <span className="logo-text">InventoryPro</span>
+        </div>
 
         <nav>
           <NavLink to="/" end onClick={() => setIsOpen(false)}>
@@ -53,7 +57,6 @@ const Sidebar = ({ children }) => {
         </nav>
       </aside>
 
-      {/* CONTENT COLUMN */}
       <div className="content-column">
         <Topbar />
         <main className="page-content">{children}</main>

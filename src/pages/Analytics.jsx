@@ -1,23 +1,25 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../store/productsSlice";
+
 import AnalyticsKPIs from "../components/analytics/AnalyticsKPIs";
 import CategoryAnalytics from "../components/analytics/CategoryAnalytics";
 import InventoryTrends from "../components/analytics/InventoryTrends";
 import StockHealthBreakdown from "../components/analytics/StockHealthBreakdown";
-import { useEffect } from "react";
-import { fetchProducts } from "../store/productsSlice";
 
 const Analytics = () => {
   const dispatch = useDispatch();
-  const { items, status, error } = useSelector((state) => state.products);
+
+  const items = useSelector((state) => state.products.items);
+
+  // const isLoading = useSelector((state) => state.ui.isLoading);
+  // const error = useSelector((state) => state.ui.error);
 
   useEffect(() => {
-    if (status === "idle") {
+    if (items.length === 0) {
       dispatch(fetchProducts());
     }
-  }, [dispatch, status]);
-
-  if (status === "loading") return <p>Loading inventory...</p>;
-  if (status === "failed") return <p>Error: {error}</p>;
+  }, [dispatch, items.length]);
 
   return (
     <div className="analytics-page">
