@@ -16,7 +16,6 @@
   /* aspect-ratio: 16 / 9; */
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .category-chart-wrapper {
     aspect-ratio: 4 / 3;

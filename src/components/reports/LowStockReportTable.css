@@ -8,7 +8,6 @@
     0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* Title */
 .low-stock-report-table h3 {
   font-size: 16px;
   font-weight: 600;
@@ -16,13 +15,11 @@
   margin-bottom: 16px;
 }
 
-/* Table */
 .low-stock-report-table table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Header */
 .low-stock-report-table thead tr {
   border-bottom: 1px solid #e5e7eb;
 }
@@ -35,7 +32,6 @@
   text-align: left;
 }
 
-/* Rows */
 .low-stock-report-table td {
   padding: 14px 10px;
   font-size: 14px;
@@ -50,9 +46,6 @@
   border-bottom: none;
 }
 
-/* ================= */
-/* STATUS BADGES */
-/* ================= */
 .low-stock-report-table td:last-child {
   font-weight: 600;
 }
@@ -69,7 +62,6 @@
   color: #dc2626;
 }
 
-/* Badge styles via span fallback */
 .status-badge {
   display: inline-block;
   padding: 4px 10px;
@@ -88,9 +80,6 @@
   color: #991b1b;
 }
 
-/* =============================== */
-/* MOBILE RESPONSIVE (CARD STYLE) */
-/* =============================== */
 @media (max-width: 640px) {
   .low-stock-report-table table,
   .low-stock-report-table thead,

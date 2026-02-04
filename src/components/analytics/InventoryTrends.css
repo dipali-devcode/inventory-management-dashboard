@@ -12,20 +12,17 @@
   margin-bottom: 12px;
 }
 
-/* 🔑 THIS FIXES MOBILE BREAKING */
 .inventory-chart-container {
   width: 100%;
   min-height: 260px;
 }
 
-/* Tablet & up */
 @media (min-width: 768px) {
   .inventory-chart-container {
     min-height: 320px;
   }
 }
 
-/* Large screens */
 @media (min-width: 1024px) {
   .inventory-chart-container {
     min-height: 360px;

@@ -14,14 +14,12 @@
   margin-bottom: 20px;
 }
 
-/* GRID */
 .reports-summary-cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
 }
 
-/* CARD */
 .summary-card {
   background: #ffffff;
   border-radius: 14px;
@@ -49,14 +47,12 @@
   color: #111827;
 }
 
-/* TABLET */
 @media (min-width: 640px) {
   .reports-summary-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* DESKTOP */
 @media (min-width: 1024px) {
   .reports-summary-cards {
     grid-template-columns: repeat(4, 1fr);

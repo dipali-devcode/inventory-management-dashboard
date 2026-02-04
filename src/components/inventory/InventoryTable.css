@@ -1,8 +1,3 @@
-
-
-/* =============================== */
-/* INVENTORY CARD */
-/* =============================== */
 .inventory-card {
   background: #ffffff;
   border-radius: 16px;
@@ -14,9 +9,6 @@
   margin-bottom: 24px;
 }
 
-/* =============================== */
-/* HEADER */
-/* =============================== */
 .inventory-header {
   display: flex;
   flex-direction: column;
@@ -45,15 +37,11 @@
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-/* =============================== */
-/* TABLE WRAPPER */
-/* =============================== */
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
 }
 
-/* Prevent bottom break */
 .table-wrapper::-webkit-scrollbar {
   height: 6px;
 }
@@ -65,9 +53,6 @@
   background: #f1f5f9;
 }
 
-/* =============================== */
-/* TABLE */
-/* =============================== */
 .inventory-table {
   width: 100%;
   min-width: 950px;
@@ -76,9 +61,6 @@
   background: #ffffff;
 }
 
-/* =============================== */
-/* HEADER ROW */
-/* =============================== */
 .inventory-table thead th {
   text-align: left;
   font-size: 12px;
@@ -89,9 +71,6 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* =============================== */
-/* BODY ROWS */
-/* =============================== */
 .inventory-table tbody td {
   padding: 14px 16px;
   font-size: 14px;
@@ -104,9 +83,6 @@
   border-bottom: none;
 }
 
-/* =============================== */
-/* PRODUCT CELL */
-/* =============================== */
 .product-cell {
   display: flex;
   align-items: center;
@@ -120,16 +96,10 @@
   object-fit: cover;
 }
 
-/* =============================== */
-/* PRICE */
-/* =============================== */
 .price {
   font-weight: 600;
 }
 
-/* =============================== */
-/* RATING */
-/* =============================== */
 .rating {
   display: flex;
   align-items: center;
@@ -138,9 +108,6 @@
   color: #374151;
 }
 
-/* =============================== */
-/* STATUS BADGES */
-/* =============================== */
 .status {
   display: inline-flex;
   align-items: center;
@@ -165,9 +132,6 @@
   color: #991b1b;
 }
 
-/* =============================== */
-/* ACTION ICON */
-/* =============================== */
 .icon-btn {
   background: none;
   border: none;
@@ -179,14 +143,7 @@
   color: #2563eb;
 }
 
-/* =============================== */
-/* MOBILE FIXES */
-/* =============================== */
 @media (max-width: 768px) {
-  /* .inventory-container {
-    padding: 12px;
-  } */
-
   .inventory-card {
     padding: 14px;
   }

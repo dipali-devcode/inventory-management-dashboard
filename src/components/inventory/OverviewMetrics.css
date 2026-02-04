@@ -8,7 +8,6 @@
   margin-bottom: 16px;
 }
 
-/* GRID – responsive by default */
 .overview-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -40,7 +39,6 @@
   font-size: 20px;
 }
 
-/* Icon colors */
 .metric-icon.blue {
   background: #e0e7ff;
   color: #4f46e5;

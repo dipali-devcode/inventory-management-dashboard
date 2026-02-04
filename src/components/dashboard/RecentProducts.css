@@ -1,4 +1,4 @@
-.card-title{
+.card-title {
   margin-bottom: 14px;
 }
 
@@ -55,9 +55,10 @@
   cursor: pointer;
 }
 
-/* Mobile */
 @media (max-width: 900px) {
-  .recent-header { display: none; }
+  .recent-header {
+    display: none;
+  }
 
   .recent-row {
     grid-template-columns: 1fr;

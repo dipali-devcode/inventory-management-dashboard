@@ -244,7 +244,7 @@ textarea:focus {
   cursor: not-allowed;
 }
 
-/* ===== DASHBOARD GRID (Reorder + Slow Moving) ===== */
+/* ===== DASHBOARD GRID  ===== */
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -262,9 +262,6 @@ textarea:focus {
   }
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
 @media (max-width: 768px) {
   .container {
     padding: 12px;
@@ -283,6 +280,8 @@ textarea:focus {
   }
 }
 
+/* ===== ANALYTICS GRID  ===== */
+
 .analytics-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -293,8 +292,7 @@ textarea:focus {
   grid-column: span 2;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .analytics-grid {
     grid-template-columns: 1fr;
   }
@@ -303,3 +301,9 @@ textarea:focus {
     grid-column: span 1;
   }
 }
+
+/* @media (max-width: 1028px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+} */

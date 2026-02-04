@@ -26,16 +26,14 @@
   color: #111827;
 }
 
-/* ICON — top right, subtle */
 .kpi-icon {
   position: absolute;
   top: 14px;
   right: 14px;
   font-size: 18px;
-  color: #9ca3af; /* neutral gray like UI */
+  color: #9ca3af;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   .analytics-kpi-grid {
     grid-template-columns: repeat(2, 1fr);
