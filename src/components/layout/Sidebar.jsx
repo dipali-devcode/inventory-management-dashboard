@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { useState } from "react";
 import {
   FiHome,
@@ -12,7 +12,7 @@ import {
 import Topbar from "./Topbar";
 import "./Sidebar.css";
 
-const Sidebar = ({ children }) => {
+const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -59,7 +59,9 @@ const Sidebar = ({ children }) => {
 
       <div className="content-column">
         <Topbar />
-        <main className="page-content">{children}</main>
+        <main className="page-content">
+          <Outlet />
+        </main>
       </div>
     </div>
   );
