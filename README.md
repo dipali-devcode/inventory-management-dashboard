@@ -110,7 +110,6 @@ inventory-dashboard/
 ├── public/
 ├── src/
 │   ├── assets/
-│   │
 │   ├── components/
 │   │   ├── analytics/
 │   │   │   ├── AnalyticsKPIs.jsx
@@ -121,13 +120,11 @@ inventory-dashboard/
 │   │   │   ├── InventoryTrends.css
 │   │   │   ├── StockHealthBreakdown.jsx
 │   │   │   └── StockHealthBreakdown.css
-│   │   │
 │   │   ├── common/
 │   │   │   ├── LoadingScreen.jsx
 │   │   │   ├── LoadingScreen.css
 │   │   │   ├── ErrorScreen.jsx
 │   │   │   └── ErrorScreen.css
-│   │   │
 │   │   ├── dashboard/
 │   │   │   ├── DashboardMetrics.jsx
 │   │   │   ├── DashboardMetrics.css
@@ -137,7 +134,6 @@ inventory-dashboard/
 │   │   │   ├── CategorySummary.css
 │   │   │   ├── RecentProducts.jsx
 │   │   │   └── RecentProducts.css
-│   │   │
 │   │   ├── inventory/
 │   │   │   ├── InventoryTable.jsx
 │   │   │   ├── InventoryTable.css
@@ -149,13 +145,11 @@ inventory-dashboard/
 │   │   │   ├── SlowMovingInventory.css
 │   │   │   ├── SupplierPerformance.jsx
 │   │   │   └── SupplierPerformance.css
-│   │   │
 │   │   ├── layout/
 │   │   │   ├── Sidebar.jsx
 │   │   │   ├── Sidebar.css
 │   │   │   ├── Topbar.jsx
 │   │   │   └── Topbar.css
-│   │   │
 │   │   └── reports/
 │   │       ├── ReportsSummaryCards.jsx
 │   │       ├── ReportsSummaryCards.css
@@ -163,10 +157,8 @@ inventory-dashboard/
 │   │       ├── CategorySummaryTable.css
 │   │       ├── LowStockReportTable.jsx
 │   │       └── LowStockReportTable.css
-│   │
 │   ├── firebase/
 │   │   └── firebase.js
-│   │
 │   ├── pages/
 │   │   ├── Auth/
 │   │   │   ├── Login.jsx
@@ -177,7 +169,6 @@ inventory-dashboard/
 │   │   ├── Reports.jsx
 │   │   ├── Settings.jsx
 │   │   └── Settings.css
-│   │
 │   ├── store/
 │   │   ├── authSlice.js
 │   │   ├── productsSlice.js
@@ -185,11 +176,9 @@ inventory-dashboard/
 │   │   ├── selectors.js
 │   │   ├── uiSlice.js
 │   │   └── index.js
-│   │
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── global.css
-│
 ├── .gitignore
 ├── index.html
 ├── package.json
