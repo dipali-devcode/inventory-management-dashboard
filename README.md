@@ -1,174 +1,246 @@
-📦 Inventory Management Dashboard
+📦 Inventory Dashboard
 
-A modern, API-driven inventory management dashboard built using React, Redux Toolkit, and REST APIs, designed with clean architecture and real-world analytics use cases.
+A modern Inventory Management Dashboard built with React, Redux Toolkit, and Firebase Authentication.
+The application provides real-time insights into inventory health, analytics, reports, and user-authenticated access.
 
-This project demonstrates end-to-end frontend development including dashboards, analytics, and reports — all derived from live API data.
+🚀 Live UI Reference
 
-🚀 Features Overview
-🧭 Application Structure
+UI design reference used for implementation:
+🔗 https://app.visily.ai/projects/ca02388e-d129-471c-8e65-5460022684f8/boards/2452663/presenter?play-mode=All+screens
 
-Sidebar navigation with routing
+✨ Features Implemented
+🔐 Authentication
 
-Modular page-based architecture
+Firebase Email/Password authentication
 
-Centralized state management using Redux Toolkit
+Login page with:
 
-API-driven data flow (no static or mock data)
+Loading state
 
-📊 Pages & Functionality
-1️⃣ Dashboard
+Error handling for invalid credentials
 
-Provides a high-level snapshot of inventory health.
+Protected routes
 
-Includes:
+Logout from:
 
-Key Metrics Cards (Total Products, Stock Units, Low Stock, Out of Stock)
+Settings page
 
-Low Stock Alerts
+Topbar profile dropdown
 
-Category Summary
+📊 Dashboard
 
-Real-time metrics derived from API data
+Overview metrics
 
-2️⃣ Inventory Page
+Low stock alerts
 
-Core inventory management view.
+Category-wise summary
 
-Includes:
+Recently added products
 
-Inventory listing fetched from API
+📦 Inventory Management
 
-Stock status indicators
+Inventory overview metrics
+
+Search products by name or category
+
+Paginated inventory table
 
 Reorder recommendations
 
-Slow-moving inventory identification
+Slow-moving inventory
 
-Fully Redux-managed state
+Supplier performance overview
 
-3️⃣ Analytics Page
+📈 Analytics
 
-Data-driven analytics built using Recharts, powered entirely by API data.
+Key performance indicators (KPIs)
 
-Includes:
+Inventory trends visualization
 
-KPI summary cards
+Stock health breakdown
 
-Inventory Stock Level Trends (derived from API data)
+Category-level analytics (API-driven)
 
-Stock Health Breakdown (In Stock / Low / Out of Stock)
+📑 Reports
 
-Category-wise analytics (product count & stock volume)
+Summary cards
 
-Defensive handling of loading and empty states
+Category summary table
 
-4️⃣ Reports Page
+Low stock report table
 
-Structured, enterprise-style reporting view.
+⚙️ Settings
 
-Includes:
+Profile section
 
-Summary cards (products, stock, low stock, out of stock)
+Logged-in user email
 
-Category Summary Report (aggregated inventory data)
+Logout action
 
-Low Stock Operational Report
+Application info (static, read-only)
 
-Clean tabular data presentation for decision-making
+Preferences section placeholder (no theme changes implemented)
 
-🛠️ Tech Stack
+🧩 Global UI Handling
 
-React (Functional Components & Hooks)
+Centralized loading screen
 
-Redux Toolkit (Global state management)
+Centralized error screen
 
-React Router DOM (Routing)
+Redux uiSlice for global UI state
 
-Recharts (Data visualization)
+Graceful API failure handling
 
-REST APIs (Inventory data source)
+🧱 Tech Stack
 
-CSS (Modular, component-scoped styling)
+Frontend: React + Vite
 
-Git & GitHub (Version control)
+State Management: Redux Toolkit
 
-🧱 Folder Structure (Simplified)
-src/
- ├─ components/
- │  ├─ Sidebar.jsx
- │  ├─ Topbar.jsx
- │
- ├─ pages/
- │  ├─ dashboard/
- │  ├─ inventory/
- │  ├─ analytics/
- │  └─ reports/
- │     ├─ Reports.jsx
- │     ├─ ReportsSummaryCards.jsx
- │     ├─ CategorySummaryTable.jsx
- │     └─ LowStockReportTable.jsx
- │
- ├─ store/
- │  ├─ store.js
- │  └─ inventorySlice.js
- │
- ├─ App.jsx
- └─ main.jsx
+Routing: React Router
 
-🔄 Data Flow Architecture
+Authentication: Firebase Auth
 
-Inventory data fetched from REST API
+Icons: React Icons / Lucide
 
-Stored centrally in Redux Toolkit store
+Styling: CSS Modules (custom)
 
-Shared across:
+📁 Project Structure
+inventory-dashboard/
+├── public/
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── analytics/
+│   │   │   ├── AnalyticsKPIs.jsx
+│   │   │   ├── AnalyticsKPIs.css
+│   │   │   ├── CategoryAnalytics.jsx
+│   │   │   ├── CategoryAnalytics.css
+│   │   │   ├── InventoryTrends.jsx
+│   │   │   ├── InventoryTrends.css
+│   │   │   ├── StockHealthBreakdown.jsx
+│   │   │   └── StockHealthBreakdown.css
+│   │   │
+│   │   ├── common/
+│   │   │   ├── LoadingScreen.jsx
+│   │   │   ├── LoadingScreen.css
+│   │   │   ├── ErrorScreen.jsx
+│   │   │   └── ErrorScreen.css
+│   │   │
+│   │   ├── dashboard/
+│   │   │   ├── DashboardMetrics.jsx
+│   │   │   ├── DashboardMetrics.css
+│   │   │   ├── LowStockAlerts.jsx
+│   │   │   ├── LowStockAlerts.css
+│   │   │   ├── CategorySummary.jsx
+│   │   │   ├── CategorySummary.css
+│   │   │   ├── RecentProducts.jsx
+│   │   │   └── RecentProducts.css
+│   │   │
+│   │   ├── inventory/
+│   │   │   ├── InventoryTable.jsx
+│   │   │   ├── InventoryTable.css
+│   │   │   ├── OverviewMetrics.jsx
+│   │   │   ├── OverviewMetrics.css
+│   │   │   ├── ReorderRecommendations.jsx
+│   │   │   ├── ReorderRecommendations.css
+│   │   │   ├── SlowMovingInventory.jsx
+│   │   │   ├── SlowMovingInventory.css
+│   │   │   ├── SupplierPerformance.jsx
+│   │   │   └── SupplierPerformance.css
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── Sidebar.css
+│   │   │   ├── Topbar.jsx
+│   │   │   └── Topbar.css
+│   │   │
+│   │   └── reports/
+│   │       ├── ReportsSummaryCards.jsx
+│   │       ├── ReportsSummaryCards.css
+│   │       ├── CategorySummaryTable.jsx
+│   │       ├── CategorySummaryTable.css
+│   │       ├── LowStockReportTable.jsx
+│   │       └── LowStockReportTable.css
+│   │
+│   ├── firebase/
+│   │   └── firebase.js
+│   │
+│   ├── pages/
+│   │   ├── Auth/
+│   │   │   ├── Login.jsx
+│   │   │   └── Login.css
+│   │   ├── Dashboard.jsx
+│   │   ├── Inventory.jsx
+│   │   ├── Analytics.jsx
+│   │   ├── Reports.jsx
+│   │   ├── Settings.jsx
+│   │   └── Settings.css
+│   │
+│   ├── store/
+│   │   ├── authSlice.js
+│   │   ├── productsSlice.js
+│   │   ├── searchSlice.js
+│   │   ├── selectors.js
+│   │   ├── uiSlice.js
+│   │   └── index.js
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── global.css
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 
-Inventory
+🔧 Setup & Run Locally
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Firebase Configuration
+
+Create src/firebase/firebase.js and add your Firebase config:
+
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  appId: "YOUR_APP_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
+
+🔒 Firebase credentials are intentionally NOT committed to Git
+
+3️⃣ Start the project
+npm run dev
+
+🔄 API Used
+
+Products API: https://dummyjson.com/products
+
+Used for:
 
 Dashboard
+
+Inventory
 
 Analytics
 
 Reports
 
-No duplicate API calls
+🛑 Notes
 
-All metrics and analytics derived from the same source of truth
+No backend/server implemented (frontend-only project)
 
-🧠 Key Engineering Decisions
+No role-based access (admin/user)
 
-No static or fake analytics data
-
-Defensive checks for API loading states
-
-Reusable components with clear responsibilities
-
-Step-by-step incremental development
-
-Resume-focused clean architecture
-
-▶️ Getting Started
-git clone <repository-url>
-cd inventory-dashboard
-npm install
-npm run dev
-
-📌 Future Enhancements (Planned)
-
-Export reports to CSV/PDF
-
-Sorting & filtering in reports
-
-Advanced analytics (time-series when backend supports it)
-
-Role-based access (Admin / Manager)
-
-💼 Resume Highlight
-
-Built a complete inventory management dashboard using React and Redux Toolkit with API-driven dashboards, analytics, and reporting modules, featuring real-time metrics, data visualization, and enterprise-style reports.
-
-👤 Author
-
-Dipali Thigale
-Frontend Developer
-React | Redux Toolkit | APIs | Data-driven UI
+Project is feature-complete and stable
