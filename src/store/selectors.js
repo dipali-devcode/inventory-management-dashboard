@@ -1,17 +1,21 @@
-// selectors.js
-export const selectFilteredProducts = (state) => {
-  const products = state.products.items || [];
-  const searchQuery = state.search.searchQuery || "";
+import { createSelector } from "@reduxjs/toolkit";
 
-  if (!searchQuery.trim()) {
-    return products;
-  }
+const selectProducts = (state) => state.products.items || [];
+const selectSearchQuery = (state) => state.search.searchQuery || "";
 
-  const lowerQuery = searchQuery.toLowerCase();
+export const selectFilteredProducts = createSelector(
+  [selectProducts, selectSearchQuery],
+  (products, searchQuery) => {
+    if (!searchQuery.trim()) {
+      return products;
+    }
 
-  return products.filter(
-    (product) =>
-      product.title.toLowerCase().includes(lowerQuery) ||
-      product.category.toLowerCase().includes(lowerQuery),
-  );
-};
+    const lowerQuery = searchQuery.toLowerCase();
+
+    return products.filter(
+      (product) =>
+        product.title.toLowerCase().includes(lowerQuery) ||
+        product.category.toLowerCase().includes(lowerQuery),
+    );
+  },
+);

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
-import {auth} from "../firebase/firebase"
+import { auth } from "../firebase/firebase";
 
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
@@ -9,7 +9,7 @@ export const loginUser = createAsyncThunk(
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
 
       return {
@@ -19,10 +19,9 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  },
 );
 
-// 🚪 Logout thunk
 export const logoutUser = createAsyncThunk(
   "auth/logoutUser",
   async (_, { rejectWithValue }) => {
@@ -31,13 +30,13 @@ export const logoutUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  }
+  },
 );
 
 const authSlice = createSlice({
   name: "auth",
   initialState: {
-    user: null, // logged-in user
+    user: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -51,7 +50,6 @@ const authSlice = createSlice({
   },
 });
 
-export const selectIsAuthenticated = (state) =>
-  Boolean(state.auth.user);
+export const selectIsAuthenticated = (state) => Boolean(state.auth.user);
 
 export default authSlice.reducer;

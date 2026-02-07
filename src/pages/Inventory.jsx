@@ -14,18 +14,15 @@ import SupplierPerformance from "../components/inventory/SupplierPerformance";
 const Inventory = () => {
   const dispatch = useDispatch();
 
-  // const isLoading = useSelector((state) => state.ui.isLoading);
-  // const error = useSelector((state) => state.ui.error);
-
   const searchQuery = useSelector((state) => state.search.searchQuery);
-
+  const allProducts = useSelector((state) => state.products.items);
   const products = useSelector(selectFilteredProducts);
 
   useEffect(() => {
-    if (products.length === 0) {
+    if (!allProducts || allProducts.length === 0) {
       dispatch(fetchProducts());
     }
-  }, [dispatch, products.length]);
+  }, [dispatch, allProducts]);
 
   return (
     <div>
